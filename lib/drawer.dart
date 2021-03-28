@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:loni_ledger/Registration.dart';
 
 import 'global.dart' as global;
 
@@ -16,14 +17,6 @@ class _NavDrawerState extends State<NavDrawer> {
         padding: EdgeInsets.zero,
         children: <Widget>[
           ListTile(
-            title: Image(
-              image: AssetImage('assets/dumbbell.jpeg'),
-              height: 40,
-              width: 70,
-            ),
-            onTap: () => {},
-          ),
-          ListTile(
             leading: Icon(FontAwesomeIcons.dumbbell),
             title: Text('Gym 1'),
             onTap: () {
@@ -31,7 +24,6 @@ class _NavDrawerState extends State<NavDrawer> {
               setState(() {
                 global.selectedIndex = 0;
               });
-              
             },
           ),
           ListTile(
@@ -44,14 +36,6 @@ class _NavDrawerState extends State<NavDrawer> {
                 print(global.selectedIndex);
               });
             },
-          ),
-          ListTile(
-            title: Image(
-              image: AssetImage('assets/pizza.jpeg'),
-              height: 40,
-              width: 70,
-            ),
-            onTap: () => {},
           ),
           ListTile(
             leading: Icon(FontAwesomeIcons.pizzaSlice),
@@ -74,14 +58,6 @@ class _NavDrawerState extends State<NavDrawer> {
             },
           ),
           ListTile(
-            title: Image(
-              image: AssetImage('assets/book.jpeg'),
-              height: 40,
-              width: 70,
-            ),
-            onTap: () => {},
-          ),
-          ListTile(
             leading: Icon(FontAwesomeIcons.book),
             title: Text('Stationary 1'),
             onTap: () {
@@ -96,6 +72,18 @@ class _NavDrawerState extends State<NavDrawer> {
             title: Text('Stationary 2'),
             onTap: () {
               Navigator.of(context).pop();
+              setState(() {
+                global.selectedIndex = 5;
+              });
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.logout),
+            title: Text('Logout'),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Registration()));
               setState(() {
                 global.selectedIndex = 5;
               });

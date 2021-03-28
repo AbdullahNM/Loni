@@ -12,7 +12,7 @@ class Registration extends StatefulWidget {
 class _RegistrationState extends State<Registration> {
   List<Widget> pages = [Login(), Registration(), Help()];
   List<String> _buttons = ['Login', 'Register', 'Help'];
-  int _selectedIndex = 0;
+  int _selectedIndex = 1;
   Widget _buildIcon(int index) {
     return GestureDetector(
       onTap: () {

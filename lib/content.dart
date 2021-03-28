@@ -272,7 +272,7 @@ class Page1 extends StatelessWidget {
             ),
             GestureDetector(
               onTap: () {
-                print('Request');
+                print('Requests');
               },
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -281,7 +281,7 @@ class Page1 extends StatelessWidget {
                   color: Color(0xFFA31FEE),
                 ),
                 child: Text(
-                  'Request',
+                  'Requests',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 20,
